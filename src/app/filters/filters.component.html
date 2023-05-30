@@ -1,0 +1,13 @@
+<input (keyup)="changeText($event)" />
+
+<div>
+  sort:
+  <button (click)="changeSort('asc')">asc</button>
+  <button (click)="changeSort('desc')">desc</button>
+</div>
+
+<div>
+  pagination:
+  <button (click)="changePagination('left')"><</button>
+  <button (click)="changePagination('right')">></button>
+</div>

@@ -1,0 +1,18 @@
+<my-filters></my-filters>
+
+<div *ngIf="filters$ | async as filters">
+  <div>Input: {{ filters[0] }}</div>
+  <div>Sort: {{ filters[1] }}</div>
+  <div>Current page: {{ filters[2] }}</div>
+</div>
+
+<div *ngIf="doctors$ | async as doctors">
+  <div class="doctor" *ngFor="let doctor of doctors">
+    <img [src]="doctor.photo" alt="" />
+    <div>
+      <div>name: {{ doctor.fullName }}</div>
+      <div>specialisation: {{ doctor.specialisation }}</div>
+      <div>working days: {{ doctor.workingDays }}</div>
+    </div>
+  </div>
+</div>
